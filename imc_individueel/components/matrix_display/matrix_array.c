@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #include "include/matrix_array.h"
 
 // Initializes the matrix array given to the function

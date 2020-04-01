@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #ifndef FLAPPY_BIRD_H
 #define FLAPPY_BIRD_H
 

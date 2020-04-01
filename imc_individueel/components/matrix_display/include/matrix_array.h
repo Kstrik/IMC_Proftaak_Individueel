@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #ifndef MATRIX_ARRAY_H
 #define MATRIX_ARRAY_H
 

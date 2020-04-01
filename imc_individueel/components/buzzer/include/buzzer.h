@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #ifndef BUZZER_H
 #define BUZZER_H
 

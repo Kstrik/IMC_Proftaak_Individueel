@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #include "include/gpio_button.h"
 
 void gpio_button_check_pressed(gpio_button_t** button);

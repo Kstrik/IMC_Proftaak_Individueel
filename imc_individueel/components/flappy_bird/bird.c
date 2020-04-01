@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #include "include/bird.h"
 
 // Draws the bird given to the function on the matrix array given to the function

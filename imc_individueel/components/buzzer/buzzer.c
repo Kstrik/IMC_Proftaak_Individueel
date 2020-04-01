@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #include "include/buzzer.h"
 
 void buzzer_set_duty_cycle(buzzer_t** buzzer, unsigned int duty_cycle);

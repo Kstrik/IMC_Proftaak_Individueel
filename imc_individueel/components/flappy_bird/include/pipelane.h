@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #ifndef PIPELANE_H
 #define PIPELANE_H
 

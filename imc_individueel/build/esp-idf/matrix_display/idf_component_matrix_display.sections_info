@@ -44,17 +44,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  19 .debug_ranges 00000080  00000000  00000000  00000997  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 20 .debug_line   000003a2  00000000  00000000  00000a17  2**0
+ 20 .debug_line   000003a4  00000000  00000000  00000a17  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 21 .debug_str    00000328  00000000  00000000  00000db9  2**0
+ 21 .debug_str    00000328  00000000  00000000  00000dbb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .comment      0000003c  00000000  00000000  000010e1  2**0
+ 22 .comment      0000003c  00000000  00000000  000010e3  2**0
                   CONTENTS, READONLY
- 23 .xtensa.info  00000038  00000000  00000000  0000111d  2**0
+ 23 .xtensa.info  00000038  00000000  00000000  0000111f  2**0
                   CONTENTS, READONLY
- 24 .xt.lit       00000028  00000000  00000000  00001155  2**0
+ 24 .xt.lit       00000028  00000000  00000000  00001157  2**0
                   CONTENTS, RELOC, READONLY
- 25 .xt.prop      00000258  00000000  00000000  0000117d  2**0
+ 25 .xt.prop      00000258  00000000  00000000  0000117f  2**0
                   CONTENTS, RELOC, READONLY
 
 matrix_array.c.obj:     file format elf32-xtensa-le
@@ -107,15 +107,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  22 .debug_ranges 000000c0  00000000  00000000  00000c4a  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 23 .debug_line   000003f3  00000000  00000000  00000d0a  2**0
+ 23 .debug_line   000003f5  00000000  00000000  00000d0a  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 24 .debug_str    00000418  00000000  00000000  000010fd  2**0
+ 24 .debug_str    00000418  00000000  00000000  000010ff  2**0
                   CONTENTS, READONLY, DEBUGGING
- 25 .comment      0000003c  00000000  00000000  00001515  2**0
+ 25 .comment      0000003c  00000000  00000000  00001517  2**0
                   CONTENTS, READONLY
- 26 .xtensa.info  00000038  00000000  00000000  00001551  2**0
+ 26 .xtensa.info  00000038  00000000  00000000  00001553  2**0
                   CONTENTS, READONLY
- 27 .xt.lit       00000030  00000000  00000000  00001589  2**0
+ 27 .xt.lit       00000030  00000000  00000000  0000158b  2**0
                   CONTENTS, RELOC, READONLY
- 28 .xt.prop      000002c4  00000000  00000000  000015b9  2**0
+ 28 .xt.prop      000002c4  00000000  00000000  000015bb  2**0
                   CONTENTS, RELOC, READONLY

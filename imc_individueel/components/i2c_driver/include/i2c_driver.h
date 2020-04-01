@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #ifndef I2C_DRIVER_H
 #define I2C_DRIVER_H
 
@@ -5,11 +10,10 @@
 #include "freertos/task.h"
 
 #include "esp_err.h"
-//#include "driver/gpio.h"
 #include "driver/i2c.h"
 #include "esp_log.h"
 
-#include "stdint.h"
+#include <stdint.h>
 
 #define WRITE_BIT I2C_MASTER_WRITE
 #define READ_BIT I2C_MASTER_READ

@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #include "include/i2c_driver.h"
 
 static SemaphoreHandle_t i2cSemaphore;     // Mutex for allowing only one task to read or write data across i2c bus
@@ -21,9 +26,9 @@ i2c_result_t i2c_driver_init(i2c_mode_t mode, uint8_t sda_pin, uint8_t scl_pin,
         config.scl_pullup_en = scl_pullup_en;
         config.master.clk_speed = clk_speed;
 
-        i2c_set_timeout(I2C_NUM_0, 20000);
+        i2c_set_timeout(I2C_NUM_0, 20000);							// Set i2c timeout
 
-        esp_err_t ret = i2c_param_config(I2C_NUM_0, &config);
+        esp_err_t ret = i2c_param_config(I2C_NUM_0, &config);		// Set i2c configuration
         if (ret != ESP_OK)
         {
             ESP_LOGE("I2CDriver", "PARAM CONFIG FAILED");
@@ -61,7 +66,7 @@ i2c_result_t i2c_driver_write_register8(uint8_t addr, uint8_t reg, uint8_t data)
     // Check if I2CDriver is already initialized, and if not write data
 	if(is_initialized)
 	{
-		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);
+		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);	// Enter critical section and take the semaphore to block other theads from entering
 		i2c_cmd_handle_t cmd = i2c_cmd_link_create();
 		i2c_master_start(cmd);
 		i2c_master_write_byte(cmd, (addr << 1) | WRITE_BIT, ACK_CHECK_EN);
@@ -70,7 +75,7 @@ i2c_result_t i2c_driver_write_register8(uint8_t addr, uint8_t reg, uint8_t data)
 		i2c_master_stop(cmd);
 		esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_RATE_MS);
 		i2c_cmd_link_delete(cmd);
-		xSemaphoreGive(i2cSemaphore);
+		xSemaphoreGive(i2cSemaphore);					// Exit critical section and give the semaphore to unblock other theads from entering
 		if (ret != ESP_OK) {
 			ESP_LOGE("I2CDriver", "ERROR: unable to write to register %d", ret);
 			return I2C_DRIVER_ERR_FAIL;
@@ -87,7 +92,7 @@ i2c_result_t i2c_driver_write_register16(uint8_t addr, uint8_t reg, uint16_t dat
 	// Check if I2CDriver is already initialized, and if not write data
 	if(is_initialized)
 	{
-		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);
+		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);	// Enter critical section and take the semaphore to block other theads from entering
 		i2c_cmd_handle_t cmd = i2c_cmd_link_create();
 		i2c_master_start(cmd);
 		i2c_master_write_byte(cmd, (addr << 1) | WRITE_BIT, ACK_CHECK_EN);
@@ -97,7 +102,7 @@ i2c_result_t i2c_driver_write_register16(uint8_t addr, uint8_t reg, uint16_t dat
 		i2c_master_stop(cmd);
 		esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_RATE_MS);
 		i2c_cmd_link_delete(cmd);
-		xSemaphoreGive(i2cSemaphore);
+		xSemaphoreGive(i2cSemaphore);					// Exit critical section and give the semaphore to unblock other theads from entering
 		if (ret != ESP_OK) {
 			ESP_LOGE("I2CDriver", "ERROR: unable to write to register %d", ret);
 			return I2C_DRIVER_ERR_FAIL;
@@ -114,7 +119,7 @@ i2c_result_t i2c_driver_write_register24(uint8_t addr, uint8_t reg, uint32_t dat
 	// Check if I2CDriver is already initialized, and if not write data
 	if(is_initialized)
 	{
-		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);
+		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);	// Enter critical section and take the semaphore to block other theads from entering
 		i2c_cmd_handle_t cmd = i2c_cmd_link_create();
 		i2c_master_start(cmd);
 		i2c_master_write_byte(cmd, (addr << 1) | WRITE_BIT, ACK_CHECK_EN);
@@ -125,7 +130,7 @@ i2c_result_t i2c_driver_write_register24(uint8_t addr, uint8_t reg, uint32_t dat
 		i2c_master_stop(cmd);
 		esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_RATE_MS);
 		i2c_cmd_link_delete(cmd);
-		xSemaphoreGive(i2cSemaphore);
+		xSemaphoreGive(i2cSemaphore);					// Exit critical section and give the semaphore to unblock other theads from entering
 		if (ret != ESP_OK)
 		{
 			ESP_LOGE("I2CDriver", "ERROR: unable to write to register %d", ret);
@@ -143,7 +148,7 @@ i2c_result_t i2c_driver_read_register8(uint8_t addr, uint8_t reg, uint8_t* data)
 	// Check if I2CDriver is already initialized, and if not read data
 	if(is_initialized)
 	{
-		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);
+		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);	// Enter critical section and take the semaphore to block other theads from entering
 		i2c_cmd_handle_t cmd = i2c_cmd_link_create();
 		i2c_master_start(cmd);
 		i2c_master_write_byte(cmd, (addr << 1) | WRITE_BIT, ACK_CHECK_EN);
@@ -152,7 +157,7 @@ i2c_result_t i2c_driver_read_register8(uint8_t addr, uint8_t reg, uint8_t* data)
 		esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_RATE_MS);
 		i2c_cmd_link_delete(cmd);
 		if (ret != ESP_OK) {
-			xSemaphoreGive(i2cSemaphore);
+			xSemaphoreGive(i2cSemaphore);				// Exit critical section and give the semaphore to unblock other theads from entering
 			ESP_LOGE("I2CDriver", "ERROR: unable to write address %02x to read reg %02x %d", addr, reg, ret);
 			return I2C_DRIVER_ERR_FAIL;
 		}
@@ -165,7 +170,7 @@ i2c_result_t i2c_driver_read_register8(uint8_t addr, uint8_t reg, uint8_t* data)
 		i2c_master_read_byte(cmd, data, (i2c_ack_type_t)ACK_VAL);
 		ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_RATE_MS);
 		i2c_cmd_link_delete(cmd);
-		xSemaphoreGive(i2cSemaphore);
+		xSemaphoreGive(i2cSemaphore);					// Exit critical section and give the semaphore to unblock other theads from entering
 		if (ret != ESP_OK)
 		{
 			ESP_LOGE("I2CDriver", "ERROR: unable to write address %02x to read reg %02x %d", addr, reg, ret);
@@ -183,7 +188,7 @@ i2c_result_t i2c_driver_read_register16(uint8_t addr, uint8_t reg, uint16_t* dat
 	// Check if I2CDriver is already initialized, and if not read data
 	if(is_initialized)
 	{
-		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);
+		xSemaphoreTake(i2cSemaphore, portMAX_DELAY);	// Enter critical section and take the semaphore to block other theads from entering
 		i2c_cmd_handle_t cmd = i2c_cmd_link_create();
 		i2c_master_start(cmd);
 		i2c_master_write_byte(cmd, (addr << 1) | WRITE_BIT, ACK_CHECK_EN);
@@ -193,7 +198,7 @@ i2c_result_t i2c_driver_read_register16(uint8_t addr, uint8_t reg, uint16_t* dat
 		i2c_cmd_link_delete(cmd);
 		if (ret != ESP_OK)
 		{
-			xSemaphoreGive(i2cSemaphore);
+			xSemaphoreGive(i2cSemaphore);				// Exit critical section and give the semaphore to unblock other theads from entering
 			ESP_LOGE("I2CDriver", "ERROR: unable to write address %02x to read reg %02x %d", addr, reg, ret);
 			return I2C_DRIVER_ERR_FAIL;
 		}
@@ -210,7 +215,7 @@ i2c_result_t i2c_driver_read_register16(uint8_t addr, uint8_t reg, uint16_t* dat
 		i2c_master_read_byte(cmd, &msb, (i2c_ack_type_t)ACK_VAL);
 		ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_RATE_MS);
 		i2c_cmd_link_delete(cmd);
-		xSemaphoreGive(i2cSemaphore);
+		xSemaphoreGive(i2cSemaphore);					// Exit critical section and give the semaphore to unblock other theads from entering
 		if (ret != ESP_OK)
 		{
 			ESP_LOGE("I2CDriver", "ERROR: unable to write address %02x to read reg %02x %d", addr, reg, ret);

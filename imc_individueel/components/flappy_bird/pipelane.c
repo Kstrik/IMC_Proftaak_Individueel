@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #include "include/pipelane.h"
 
 // Draws the pipelane given to the function on the matrix array given to the function

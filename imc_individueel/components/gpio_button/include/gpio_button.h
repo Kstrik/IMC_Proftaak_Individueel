@@ -1,3 +1,8 @@
+/*
+    Author: Kenley Strik
+    Addition: This whole file was written by Kenley Strik
+*/
+
 #ifndef GPIO_BUTTON_H
 #define GPIO_BUTTON_H
 
