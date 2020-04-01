@@ -1,0 +1,121 @@
+In archive C:/esp/Proftaak_IMC/imc_individueel/build/esp-idf/matrix_display/libmatrix_display.a:
+
+matrix_display.c.obj:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.matrix_display_init 00000014  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.matrix_display_deinit 00000004  00000000  00000000  00000048  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.matrix_display_set_pixels 00000004  00000000  00000000  0000004c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.matrix_display_update 00000004  00000000  00000000  00000050  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.matrix_display_clear 00000004  00000000  00000000  00000054  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .text         00000000  00000000  00000000  00000058  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .data         00000000  00000000  00000000  00000058  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .bss          00000000  00000000  00000000  00000058  2**0
+                  ALLOC
+  8 .text.matrix_display_init 0000008e  00000000  00000000  00000058  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .text.matrix_display_deinit 0000001a  00000000  00000000  000000e8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .text.matrix_display_set_pixel 0000009b  00000000  00000000  00000104  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .text.matrix_display_set_pixels 0000002f  00000000  00000000  000001a0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .text.matrix_display_update 0000003d  00000000  00000000  000001d0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .text.matrix_display_clear 00000050  00000000  00000000  00000210  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .debug_frame  000000a0  00000000  00000000  00000260  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 15 .debug_info   000003e6  00000000  00000000  00000300  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 16 .debug_abbrev 00000141  00000000  00000000  000006e6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .debug_loc    00000128  00000000  00000000  00000827  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 18 .debug_aranges 00000048  00000000  00000000  0000094f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 19 .debug_ranges 00000080  00000000  00000000  00000997  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 20 .debug_line   000003a2  00000000  00000000  00000a17  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 21 .debug_str    00000328  00000000  00000000  00000db9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 22 .comment      0000003c  00000000  00000000  000010e1  2**0
+                  CONTENTS, READONLY
+ 23 .xtensa.info  00000038  00000000  00000000  0000111d  2**0
+                  CONTENTS, READONLY
+ 24 .xt.lit       00000028  00000000  00000000  00001155  2**0
+                  CONTENTS, RELOC, READONLY
+ 25 .xt.prop      00000258  00000000  00000000  0000117d  2**0
+                  CONTENTS, RELOC, READONLY
+
+matrix_array.c.obj:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.matrix_array_deinit 00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.matrix_array_add_matrix_display 00000014  00000000  00000000  0000003c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.matrix_array_set_pixel 00000008  00000000  00000000  00000050  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.matrix_array_set_pixels 00000004  00000000  00000000  00000058  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.matrix_array_update 00000004  00000000  00000000  0000005c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .literal.matrix_array_clear 00000004  00000000  00000000  00000060  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .text         00000000  00000000  00000000  00000064  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  7 .data         00000000  00000000  00000000  00000064  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .bss          00000000  00000000  00000000  00000064  2**0
+                  ALLOC
+  9 .text.matrix_array_init 0000003a  00000000  00000000  00000064  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .text.matrix_array_deinit 0000004e  00000000  00000000  000000a0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .text.matrix_array_display_exists 00000030  00000000  00000000  000000f0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .text.matrix_array_add_matrix_display 000000a0  00000000  00000000  00000120  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .text.matrix_array_set_pixel 0000007e  00000000  00000000  000001c0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .text.matrix_array_set_pixels 0000002f  00000000  00000000  00000240  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 15 .text.matrix_array_update 00000029  00000000  00000000  00000270  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 16 .text.matrix_array_clear 00000029  00000000  00000000  0000029c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 17 .debug_frame  000000d0  00000000  00000000  000002c8  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 18 .debug_info   00000530  00000000  00000000  00000398  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 19 .debug_abbrev 00000175  00000000  00000000  000008c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 20 .debug_loc    000001b5  00000000  00000000  00000a3d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 21 .debug_aranges 00000058  00000000  00000000  00000bf2  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 22 .debug_ranges 000000c0  00000000  00000000  00000c4a  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 23 .debug_line   000003f3  00000000  00000000  00000d0a  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 24 .debug_str    00000418  00000000  00000000  000010fd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 25 .comment      0000003c  00000000  00000000  00001515  2**0
+                  CONTENTS, READONLY
+ 26 .xtensa.info  00000038  00000000  00000000  00001551  2**0
+                  CONTENTS, READONLY
+ 27 .xt.lit       00000030  00000000  00000000  00001589  2**0
+                  CONTENTS, RELOC, READONLY
+ 28 .xt.prop      000002c4  00000000  00000000  000015b9  2**0
+                  CONTENTS, RELOC, READONLY
